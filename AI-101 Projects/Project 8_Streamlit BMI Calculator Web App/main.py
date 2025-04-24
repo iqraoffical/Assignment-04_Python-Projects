@@ -12,6 +12,15 @@ bmi = weight / ((height / 100) ** 2)
 
 # Show result
 st.write(f"Your BMI is {bmi:.2f}")
+if bmi < 18.5:
+    st.warning("You are underweight.")
+elif 18.5 <= bmi < 25:
+    st.success("You have a normal weight.")
+elif 25 <= bmi < 30:
+    st.info("You are overweight.")
+else:
+    st.error("You are in the obesity range.")
+
 
 # Interpretation
 st.write("- Underweight: BMI less than 18.5")
